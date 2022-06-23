@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Hotel Management System</title>
+
+      <style type="text/css">
+
+      *{
+        font-family: sans-serif;
+      }
+      .container {
+      width: 100%;
+      display: inline-block;
+      margin: 0 auto;
+      transition: width .1s;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        width: 640px;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        width: 1024px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        width: 1280px;
+      }
+    }
+    @media (min-width: 1536px) {
+      .container {
+        width: 1536px;
+      }
+    }
+
+     /*add full-width input fields*/
+     
+    input[type=text],
+    input[type=password],
+    input[type=number],
+    input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+     
+    button {
+        background-color: Green;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    /*set styles for the cancel button*/
+    
+    /*float cancel and signup buttons and add an equal width*/
+     
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /*add padding to container elements*/
+     
+    .container1 {
+        padding: 16px;
+    }
+    /*clear floats*/
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*styles for cancel button and signup button
+      on extra small screens*/
+     
+    @media screen and (max-width: 300px) {
+        .signupbtn {
+            width: 100%;
+        }
+    }
+    </style>
+
+    <body>
+      <div class="container1">
+        <header>
+          <h1>Hotel Management System</h1>
+          <hr>
+        </header>
+      
+
+            <h2>Customer Registration Page</h2>
+            <!--Step 1:Adding HTML-->
+            <form  method="POST" style="border:1px solid #ccc">
+                {% csrf_token %}
+                <div class="container">
+                    <label><b>Room Number</b></label>
+                    <input type="number" placeholder="Choose room number" name="room" required>
+         
+                    <label><b>Amount Paid</b></label>
+                    <input type="number" placeholder="Enter Amount In naira" name="amount" required>
+
+                    <label><b>Occupant Name</b></label>
+                    <input type="text" placeholder="Enter Occupant Name" name="occuname" required>
+
+                    <label><b>Occupant Email</b></label>
+                    <input type="Email" placeholder="Enter Occupant Email" name="occumail" required>
+
+                    <label><b>Occupant Occupation</b></label>
+                    <input type="text" placeholder="Occupant Occupation" name="occu" required>
+
+                    <label><b>Number of nights</b></label>
+                    <input type="number" placeholder="Enter Number of nights" name="night" required>
+
+                    <label><b>Start Date</b></label>
+                    <input type="date" placeholder="Choose Date" name="start" required>
+
+                    <label><b>End Date</b></label>
+                    <input type="date" placeholder="Choose date" name="end" required>
+         
+                    <div class="clearfix">
+                        <button type="save" class="signupbtn" name="submit">Save</button>
+                    </div>
+                </div>
+            </form>
+     
+</body>
+ 
+</html>
+      </div>
+
+    </body>
